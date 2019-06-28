@@ -4,12 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Jogo extends Model
+class Time extends Model
 {
-    protected $table = 'jogos';
+    protected $table = 'times';
     protected $PrimaryKey = 'id';
-    protected $fillable = [
-        'nome'
-    ];
+    protected $fillable = ['nome','criador','estado','divisao'];
     public $timestamps = false;
 }

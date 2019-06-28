@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Jogo;
+use App\Time;
 
-class JogosController extends Controller
+
+class TimesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,7 @@ class JogosController extends Controller
      */
     public function index()
     {
-        return Jogo::all();
+        return Time::all();
     }
 
     /**
@@ -38,7 +39,7 @@ class JogosController extends Controller
         // $jogo = new Jogo;
         // $jogo->nome = $request->nome;
         // $jogo->save();
-        return Jogo::create($request->all());
+        return Time::create($request->all());
     }
 
     /**
@@ -49,7 +50,7 @@ class JogosController extends Controller
      */
     public function show($id)
     {
-        return Jogo::find($id);
+        return Time::find($id);
     }
 
     /**
@@ -72,7 +73,7 @@ class JogosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $jogos = Jogo::findOrFail($id);
+        $jogos = Time::findOrFail($id);
         $jogos->update($request->all());
 
         return $jogos;
@@ -86,7 +87,7 @@ class JogosController extends Controller
      */
     public function destroy($id)
     {
-        $jogos = Jogo::findOrFail($id);
+        $jogos = Time::findOrFail($id);
         $jogos->delete();
 
         return 204;

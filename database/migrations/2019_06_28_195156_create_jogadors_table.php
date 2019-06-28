@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Jogos extends Migration
+class CreateJogadorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class Jogos extends Migration
      */
     public function up()
     {
-        Schema::create('jogos', function (Blueprint $table) {
+        Schema::create('jogadors', function (Blueprint $table) {
             $table->Increments('id');
             $table->string('nome');
+            $table->string('time');
+            $table->string('estado_origem');
+            $table->string('pais_origem');
         });
     }
 
@@ -26,6 +29,6 @@ class Jogos extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('jogadors');
     }
 }
