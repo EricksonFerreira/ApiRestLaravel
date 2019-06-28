@@ -7,7 +7,7 @@ import requests
 
 # r = requests.get('http://localhost:8000/api/times/')
 # r = requests.get('http://localhost:8000/api/times/show/1')
-r = requests.post('http://localhost:8000/api/times/store/?nome=Flamengo&time=Paulo&estado_origem=Rio de Janeiro&pais_origem=Serie A')
-# r = requests.put('http://localhost:8000/api/times/update/1?nome=Paulo&time=Ceara&estado_origem=Bahia&pais_origem=Brasil')
+r = requests.post('http://localhost:8000/api/times/store/?nome=Flamengo&criador=Paulo&estado=Rio de Janeiro&divisao=Serie A')
+# r = requests.put('http://localhost:8000/api/times/update/1?nome=Paulo&criador=Ceara&estado=Bahia&divisao=Brasil')
 # r = requests.delete('http://localhost:8000/api/times/destroy/1')
 print (r.text)
