@@ -27,7 +27,8 @@ Route::group([
     Route::post('store/', 'JogadorController@store')->name('store'); /*	http://localhost:8000/api/jogador/store/?nome=Riquelme&time=Vitoria&estado_origem=Pernambuco&pais_origem=Brasil */
     Route::get('show/{id}', 'JogadorController@show')->name('show'); /*	http://localhost:8000/api/jogador/show/1 */
     Route::put('update/{id}', 'JogadorController@update')->name('update'); /*	http://localhost:8000/api/jogador/update/1?nome=Paulo&time=Ceara&estado_origem=Bahia&pais_origem=Brasil */
-    Route::delete('destroy/{id}', 'JogadorController@destroy')->name('destroy'); /*	http://localhost:8000/api/jogador/destroy/1 */    
+    Route::delete('destroy/{id}', 'JogadorController@destroy')->name('destroy'); /* http://localhost:8000/api/jogador/destroy/1 */    
+    Route::delete('deleteAll/', 'JogadorController@deleteAll')->name('deleteAll'); /*	http://localhost:8000/api/jogador/destroy/1 */    
 });
    
 

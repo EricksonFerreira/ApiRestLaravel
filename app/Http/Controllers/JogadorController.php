@@ -91,4 +91,12 @@ class JogadorController extends Controller
 
         return 204;
     }
+    public function deleteAll(){
+        $jogador = Jogador::all();
+        foreach($jogador as $item){
+            $teste = Jogador::find($item['id']);
+            $teste->delete();
+        }
+        // $product->delete();
+    }
 }
