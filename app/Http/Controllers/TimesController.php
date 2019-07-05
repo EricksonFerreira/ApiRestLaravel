@@ -92,4 +92,12 @@ class TimesController extends Controller
 
         return 204;
     }
+    public function deleteAll(){
+        $time = Time::all();
+        foreach($time as $item){
+            $teste = Time::find($item['id']);
+            $teste->delete();
+        }
+        // $product->delete();
+    }
 }

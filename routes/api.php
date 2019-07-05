@@ -42,6 +42,7 @@ Route::group([
     Route::get('show/{id}', 'TimesController@show')->name('show'); /*	http://localhost:8000/api/times/show/1 */
     Route::put('update/{id}', 'TimesController@update')->name('update'); /*	http://localhost:8000/api/times/update/1?nome=basquete */
     Route::delete('destroy/{id}', 'TimesController@destroy')->name('destroy'); /*	http://localhost:8000/api/times/destroy/1 */
+    Route::delete('deleteAll/', 'TimesController@deleteAll')->name('deleteAll'); /*   http://localhost:8000/api/jogador/destroy/1 */    
 });
     
 
